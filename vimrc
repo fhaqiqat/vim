@@ -86,7 +86,7 @@ set tags=./tags;
 
 "set guifont=<FONT_NAME> <FONT_SIZE>"
 "set guifont=Code\ New\ Roman\ Nerd\ Font\ Complete\ 12
-set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 11
+set guifont=Ubuntu\ Mono\ Nerd\ Font\ Complete\ 11
 "setting for devicons
 set encoding=utf8
 "Automatically running Nerdtree when vim opens
@@ -116,3 +116,11 @@ let g:syntastic_mode_map={
         \ "passive_filetypes": ["python"] }
 
 " end of syntastic setting
+" gvim specific settings here                       
+if has('gui_running')
+    set background=light
+    set guioptions-=T    " no toolbar
+    set linespace=5      " to show underscores not as space
+    set guifont=Ubuntu\ Mono\ Nerd\ Font\ Complete\ 11
+
+endif
